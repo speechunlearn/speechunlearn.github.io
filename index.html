@@ -43,6 +43,22 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+        .small-audio {
+            width: 100px; /* Adjust width to make it smaller */
+            height: 30px; /* Adjust height */
+        }
+
+        .small-audio::-webkit-media-controls {
+            background-color: #f5f5f5; /* Change background color to match the design */
+        }
+
+        .small-audio::-webkit-media-controls-panel {
+            background-color: #f5f5f5; /* Panel background color */
+        }
+  </style>
+
 </head>
 <body>
 
@@ -191,82 +207,82 @@
   </div>
 </section>
 
-<section class="section hero is-light">
-  <div class="container">
-    <h2 class="title is-3">Audio Comparison Carousel</h2>
-    <div id="carousel-demo" class="carousel">
-      <!-- First Audio Table (Set 1) -->
-      <div class="carousel-item">
-        <table class="table is-bordered is-fullwidth">
-          <thead>
-            <tr>
-              <th>Text</th>
-              <th>Speaker Prompt</th>
-              <th>Ground Truth</th>
-              <th>VALL-E</th>
-              <th>LibriTTS Model</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Example</td>
-              <td><audio controls><source src="static/audio/speaker_prompt_1.wav" type="audio/wav"></audio></td>
-              <td><audio controls><source src="static/audio/ground_truth_1.wav" type="audio/wav"></audio></td>
-              <td><audio controls><source src="static/audio/valle_1.wav" type="audio/wav"></audio></td>
-              <td><audio controls><source src="static/audio/libritts_1.wav" type="audio/wav"></audio></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- Second Audio Table (Set 2) -->
-      <div class="carousel-item">
-        <table class="table is-bordered is-fullwidth">
-          <thead>
-            <tr>
-              <th>Text</th>
-              <th>Speaker Prompt</th>
-              <th>Ground Truth</th>
-              <th>VALL-E</th>
-              <th>LibriTTS Model</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Example</td>
-              <td><audio controls><source src="static/audio/speaker_prompt_2.wav" type="audio/wav"></audio></td>
-              <td><audio controls><source src="static/audio/ground_truth_2.wav" type="audio/wav"></audio></td>
-              <td><audio controls><source src="static/audio/valle_2.wav" type="audio/wav"></audio></td>
-              <td><audio controls><source src="static/audio/libritts_2.wav" type="audio/wav"></audio></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- Third Audio Table (Set 3) -->
-      <div class="carousel-item">
-        <table class="table is-bordered is-fullwidth">
-          <thead>
-            <tr>
-              <th>Text</th>
-              <th>Speaker Prompt</th>
-              <th>Ground Truth</th>
-              <th>VALL-E</th>
-              <th>LibriTTS Model</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Example</td>
-              <td><audio controls><source src="static/audio/speaker_prompt_3.wav" type="audio/wav"></audio></td>
-              <td><audio controls><source src="static/audio/ground_truth_3.wav" type="audio/wav"></audio></td>
-              <td><audio controls><source src="static/audio/valle_3.wav" type="audio/wav"></audio></td>
-              <td><audio controls><source src="static/audio/libritts_3.wav" type="audio/wav"></audio></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
+<!--<section class="section hero is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <h2 class="title is-3">Audio Comparison Carousel</h2>-->
+<!--    <div id="carousel-demo" class="carousel">-->
+<!--      &lt;!&ndash; First Audio Table (Set 1) &ndash;&gt;-->
+<!--      <div class="carousel-item">-->
+<!--        <table class="table is-bordered is-fullwidth">-->
+<!--          <thead>-->
+<!--            <tr>-->
+<!--              <th>Text</th>-->
+<!--              <th>Speaker Prompt</th>-->
+<!--              <th>Ground Truth</th>-->
+<!--              <th>VALL-E</th>-->
+<!--              <th>LibriTTS Model</th>-->
+<!--            </tr>-->
+<!--          </thead>-->
+<!--          <tbody>-->
+<!--            <tr>-->
+<!--              <td>Example</td>-->
+<!--              <td><audio controls><source src="static/audio/speaker_prompt_1.wav" type="audio/wav"></audio></td>-->
+<!--              <td><audio controls><source src="static/audio/ground_truth_1.wav" type="audio/wav"></audio></td>-->
+<!--              <td><audio controls><source src="static/audio/valle_1.wav" type="audio/wav"></audio></td>-->
+<!--              <td><audio controls><source src="static/audio/libritts_1.wav" type="audio/wav"></audio></td>-->
+<!--            </tr>-->
+<!--          </tbody>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--      &lt;!&ndash; Second Audio Table (Set 2) &ndash;&gt;-->
+<!--      <div class="carousel-item">-->
+<!--        <table class="table is-bordered is-fullwidth">-->
+<!--          <thead>-->
+<!--            <tr>-->
+<!--              <th>Text</th>-->
+<!--              <th>Speaker Prompt</th>-->
+<!--              <th>Ground Truth</th>-->
+<!--              <th>VALL-E</th>-->
+<!--              <th>LibriTTS Model</th>-->
+<!--            </tr>-->
+<!--          </thead>-->
+<!--          <tbody>-->
+<!--            <tr>-->
+<!--              <td>Example</td>-->
+<!--              <td><audio controls><source src="static/audio/speaker_prompt_2.wav" type="audio/wav"></audio></td>-->
+<!--              <td><audio controls><source src="static/audio/ground_truth_2.wav" type="audio/wav"></audio></td>-->
+<!--              <td><audio controls><source src="static/audio/valle_2.wav" type="audio/wav"></audio></td>-->
+<!--              <td><audio controls><source src="static/audio/libritts_2.wav" type="audio/wav"></audio></td>-->
+<!--            </tr>-->
+<!--          </tbody>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--      &lt;!&ndash; Third Audio Table (Set 3) &ndash;&gt;-->
+<!--      <div class="carousel-item">-->
+<!--        <table class="table is-bordered is-fullwidth">-->
+<!--          <thead>-->
+<!--            <tr>-->
+<!--              <th>Text</th>-->
+<!--              <th>Speaker Prompt</th>-->
+<!--              <th>Ground Truth</th>-->
+<!--              <th>VALL-E</th>-->
+<!--              <th>LibriTTS Model</th>-->
+<!--            </tr>-->
+<!--          </thead>-->
+<!--          <tbody>-->
+<!--            <tr>-->
+<!--              <td>Example</td>-->
+<!--              <td><audio controls><source src="static/audio/speaker_prompt_3.wav" type="audio/wav"></audio></td>-->
+<!--              <td><audio controls><source src="static/audio/ground_truth_3.wav" type="audio/wav"></audio></td>-->
+<!--              <td><audio controls><source src="static/audio/valle_3.wav" type="audio/wav"></audio></td>-->
+<!--              <td><audio controls><source src="static/audio/libritts_3.wav" type="audio/wav"></audio></td>-->
+<!--            </tr>-->
+<!--          </tbody>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
 
   <!-- Teaser video-->
@@ -287,42 +303,61 @@
 <!-- End teaser video -->
 
 <!-- Image carousel -->
-<!--<section class="hero is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--       <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--          First image description.-->
-<!--        </h2>-->
-<!--      </div>-->
-<!--      <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--          Second image description.-->
-<!--        </h2>-->
-<!--      </div>-->
-<!--      <div class="item">-->
-<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>-->
-<!--        <h2 class="subtitle has-text-centered">-->
-<!--         Third image description.-->
-<!--       </h2>-->
-<!--     </div>-->
-<!--     <div class="item">-->
-<!--      &lt;!&ndash; Your image here &ndash;&gt;-->
-<!--      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>-->
-<!--      <h2 class="subtitle has-text-centered">-->
-<!--        Fourth image description.-->
-<!--      </h2>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <table class="table is-bordered is-fullwidth">
+          <thead>
+            <tr>
+              <th>Text</th>
+              <th>Speaker Prompt</th>
+              <th>Ground Truth</th>
+              <th>VALL-E</th>
+              <th>LibriTTS Model</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Example</td>
+              <td><audio class="small-audio" controls><source src="static/audio/speaker_prompt_1.wav" type="audio/wav"></audio></td>
+              <td><audio class="small-audio" controls><source src="static/audio/ground_truth_1.wav" type="audio/wav"></audio></td>
+              <td><audio class="small-audio" controls><source src="static/audio/valle_1.wav" type="audio/wav"></audio></td>
+              <td><audio class="small-audio" controls><source src="static/audio/libritts_1.wav" type="audio/wav"></audio></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="subtitle has-text-centered">
+          First audio description.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
 <!-- End image carousel -->
 
 
