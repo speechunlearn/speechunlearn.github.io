@@ -107,6 +107,12 @@
     .carousel-item {
       margin-right: 20px; /* Adjust this value to add more or less space between slides */
     }
+    .table-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: center;
+    }
   </style>
 
 </head>
@@ -392,7 +398,7 @@
 
   <section class="section">
     <div class="container table-container">
-      <h1 class="title has-text-centered">LibriSpeech Samples</h1>
+      <h1 class="title has-text-centered">LibriSpeech Evaluation</h1>
       <table class="table is-fullwidth">
         <thead>
           <tr>
@@ -406,7 +412,7 @@
         <tbody>
           <tr>
             <td rowspan="3">They moved thereafter cautiously about the hut groping before...</td>
-            <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/src.wav" type="audio/wav"></audio></td>
+            <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>
             <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
             <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
             <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
@@ -426,7 +432,7 @@
 
   <section class="section">
     <div class="container">
-      <h1 class="title has-text-centered">LibriSpeech Samples Carousel</h1>
+      <h1 class="title has-text-centered">Baseline Comparison on Forget Speakers</h1>
 
       <!-- Carousel container -->
       <div id="carousel-demo" class="carousel">
@@ -434,6 +440,7 @@
         <!-- First Slide -->
         <div class="carousel-item">
           <div class="table-container">
+            <h2 class="table-title">LibriHeavy Forget Speaker 1</h2>
             <table class="table is-fullwidth">
               <thead>
                 <tr>
@@ -477,6 +484,7 @@
         <div class="carousel-item">
           <div class="table-container">
             <table class="table is-fullwidth">
+              <h2 class="table-title">LibriHeavy Forget Speaker 2</h2>
               <thead>
                 <tr>
                   <th>Ground Truth</th>
@@ -489,26 +497,26 @@
               </thead>
               <tbody>
               <tr>
-                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
               </tr>
               <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
               </tr>
               <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
               </tr>
               </tbody>
             </table>
@@ -518,6 +526,103 @@
         <!-- Third Slide -->
         <div class="carousel-item">
           <div class="table-container">
+            <table class="table is-fullwidth">
+              <h2 class="table-title">LibriHeavy Forget Speaker 3</h2>
+              <thead>
+                <tr>
+                  <th>Ground Truth</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU</th>
+                  <th>TGU</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Fourth Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <h2 class="table-title">LibriHeavy Forget Speaker 4</h2>
+              <thead>
+                <tr>
+                  <th>Ground Truth</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU</th>
+                  <th>TGU</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Baseline Comparison on Forget Speakers</h1>
+
+      <!-- Carousel container -->
+      <div id="carousel-demo" class="carousel">
+
+        <!-- First Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 1</h2>
             <table class="table is-fullwidth">
               <thead>
                 <tr>
@@ -531,26 +636,98 @@
               </thead>
               <tbody>
               <tr>
-                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/Original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
               </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Second Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <h2 class="table-title">LibriSpeech Remain Speaker 2</h2>
+              <thead>
+                <tr>
+                  <th>Ground Truth</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU</th>
+                  <th>TGU</th>
+                </tr>
+              </thead>
+              <tbody>
               <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/Original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
               </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Third Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <h2 class="table-title">LibriSpeech Remain Speaker 3</h2>
+              <thead>
+                <tr>
+                  <th>Ground Truth</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU</th>
+                  <th>TGU</th>
+                </tr>
+              </thead>
+              <tbody>
               <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/Original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Fourth Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <h2 class="table-title">LibriSpeech Remain Speaker 4</h2>
+              <thead>
+                <tr>
+                  <th>Ground Truth</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU</th>
+                  <th>TGU</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/Original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>
               </tr>
               </tbody>
             </table>
@@ -560,8 +737,6 @@
       </div>
     </div>
   </section>
-
-
 
 <!-- Youtube video -->
 <!--<section class="hero is-small is-light">-->
