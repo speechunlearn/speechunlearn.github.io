@@ -193,6 +193,82 @@
   </div>
 </section>
 
+<section class="section hero is-light">
+  <div class="container">
+    <h2 class="title is-3">Audio Comparison Carousel</h2>
+    <div id="carousel-demo" class="carousel">
+      <!-- First Audio Table (Set 1) -->
+      <div class="carousel-item">
+        <table class="table is-bordered">
+          <thead>
+            <tr>
+              <th>Text</th>
+              <th>Speaker Prompt</th>
+              <th>Ground Truth</th>
+              <th>VALL-E</th>
+              <th>LibriTTS Model</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>They moved thereafter cautiously about the hut groping...</td>
+              <td><audio controls><source src="static/audio/speaker_prompt_1.wav" type="audio/wav"></audio></td>
+              <td><audio controls><source src="static/audio/ground_truth_1.wav" type="audio/wav"></audio></td>
+              <td><audio controls><source src="static/audio/valle_1.wav" type="audio/wav"></audio></td>
+              <td><audio controls><source src="static/audio/libritts_1.wav" type="audio/wav"></audio></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Second Audio Table (Set 2) -->
+      <div class="carousel-item">
+        <table class="table is-bordered">
+          <thead>
+            <tr>
+              <th>Text</th>
+              <th>Speaker Prompt</th>
+              <th>Ground Truth</th>
+              <th>VALL-E</th>
+              <th>LibriTTS Model</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Another example text for set 2...</td>
+              <td><audio controls><source src="static/audio/speaker_prompt_2.wav" type="audio/wav"></audio></td>
+              <td><audio controls><source src="static/audio/ground_truth_2.wav" type="audio/wav"></audio></td>
+              <td><audio controls><source src="static/audio/valle_2.wav" type="audio/wav"></audio></td>
+              <td><audio controls><source src="static/audio/libritts_2.wav" type="audio/wav"></audio></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Third Audio Table (Set 3) -->
+      <div class="carousel-item">
+        <table class="table is-bordered">
+          <thead>
+            <tr>
+              <th>Text</th>
+              <th>Speaker Prompt</th>
+              <th>Ground Truth</th>
+              <th>VALL-E</th>
+              <th>LibriTTS Model</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Another example text for set 3...</td>
+              <td><audio controls><source src="static/audio/speaker_prompt_3.wav" type="audio/wav"></audio></td>
+              <td><audio controls><source src="static/audio/ground_truth_3.wav" type="audio/wav"></audio></td>
+              <td><audio controls><source src="static/audio/valle_3.wav" type="audio/wav"></audio></td>
+              <td><audio controls><source src="static/audio/libritts_3.wav" type="audio/wav"></audio></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Teaser video-->
 <!--<section class="hero teaser">-->
@@ -274,86 +350,38 @@
 <!-- End youtube video -->
 
 
- Video carousel
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <table class="table is-bordered">
-            <thead>
-              <tr>
-                <th>Input Source</th>
-                <th>Input Prompt</th>
-                <th>Ground Truth</th>
-                <th>SGU</th>
-                <th>TGU</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Forget Set</td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-              </tr>
-              <!-- Add more rows as needed -->
-            </tbody>
-          </table>
-        </div>
-        <div class="item item-video2">
-          <table class="table is-bordered">
-            <thead>
-              <tr>
-                <th>Input Source</th>
-                <th>Input Prompt</th>
-                <th>Ground Truth</th>
-                <th>SGU</th>
-                <th>TGU</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Forget Set</td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-              </tr>
-              <!-- Add more rows as needed -->
-            </tbody>
-          </table>
-        </div>
-        <div class="item item-video3">
-          <table class="table is-bordered">
-            <thead>
-              <tr>
-                <th>Input Source</th>
-                <th>Input Prompt</th>
-                <th>Ground Truth</th>
-                <th>SGU</th>
-                <th>TGU</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Forget Set</td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-              </tr>
-              <!-- Add more rows as needed -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
- End video carousel
+<!-- Video carousel -->
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title is-3">Another Carousel</h2>-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="item item-video1">-->
+<!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel1.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video2">-->
+<!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel2.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video3">-->
+<!--          <video poster="" id="video3" autoplay controls muted loop height="100%">\-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel3.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End video carousel -->
 
 
 
@@ -416,6 +444,14 @@
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
+<script>
+  bulmaCarousel.attach('#carousel-demo', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    loop: true,
+    autoplay: true
+  });
+</script>
 
   </body>
   </html>
