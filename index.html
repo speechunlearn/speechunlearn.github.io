@@ -29,8 +29,14 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <!-- Include Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">
+  <!-- Include Bulma Carousel CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.0/dist/css/bulma-carousel.min.css">
+
+
+<!--  <link rel="stylesheet" href="static/css/bulma.min.css">-->
+<!--  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">-->
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
@@ -40,10 +46,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-<!--  <script src="static/js/bulma-carousel.min.js"></script>-->
+  <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.0/dist/js/bulma-carousel.min.js"></script>
+
 
 
   <style>
@@ -623,14 +629,17 @@
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
-<script>
-  bulmaCarousel.attach('#carousel-demo', {
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    loop: true,
-    autoplay: false
-  });
-</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      bulmaCarousel.attach('#carousel-demo', {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        loop: true,
+        autoplay: false, // Set to true if you want it to autoplay
+        duration: 300, // Speed of the transition
+      });
+    });
+  </script>
 
   </body>
   </html>
