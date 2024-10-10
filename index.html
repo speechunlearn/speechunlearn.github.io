@@ -53,6 +53,7 @@
 
 
   <style>
+
     .small-audio {
       width: 150px; /* Adjust width to make it smaller */
       height: 30px; /* Adjust height */
@@ -70,6 +71,13 @@
   </style>
 
   <style>
+     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 40px;
+    }
+
     /* Custom styles for the table and audio controls */
     table {
       width: 90%;
@@ -127,6 +135,32 @@
       font-weight: bold;
       margin-bottom: 15px;
       text-align: center;
+    }
+    /* Ensure the shadow is not cut off */
+    .carousel-container::before,
+    .carousel-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 20px;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+      z-index: 2;
+    }
+
+    .carousel-container::before {
+      left: -20px; /* Shadow on the left */
+    }
+
+    .carousel-container::after {
+      right: -20px; /* Shadow on the right */
+    }
+
+    /* Optional: Carousel arrow styles (if any) */
+    .carousel-arrow {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
   </style>
 
