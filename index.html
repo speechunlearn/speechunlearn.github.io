@@ -73,6 +73,7 @@
     /* Custom styles for the table and audio controls */
     table {
       width: 90%;
+      background-color: white;
       border-collapse: collapse;
       margin-top: 20px;
     }
@@ -80,6 +81,12 @@
       padding: 10px;
       text-align: center;
       border-bottom: 1px solid #ddd;
+    }
+    tr:last-child td {
+      border-bottom: none; /* Remove the bottom border of the last row */
+    }
+    td {
+      border-bottom: 2px solid #ddd; /* Adjust the thickness as needed */
     }
     th {
       font-weight: bold;
@@ -97,12 +104,13 @@
     }
     .table-container {
       background-color: white; /* Optional: For the white background */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: To add the shadow effect */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Optional: To add the shadow effect */
       padding: 20px;
       border-radius: 10px; /* For rounded corners */
     }
     td[rowspan] {
       vertical-align: middle;
+      border-bottom: 2px solid #ddd;
     }
     .carousel-container {
       position: relative;
