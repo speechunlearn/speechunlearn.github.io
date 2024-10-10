@@ -61,6 +61,39 @@
     }
   </style>
 
+  <style>
+    /* Custom styles for the table and audio controls */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      font-weight: bold;
+      border-bottom: 2px solid #333;
+    }
+    .audio-controls {
+      display: inline-block;
+      width: 120px; /* Adjust this width for smaller or larger controls */
+      border-radius: 20px; /* Rounded corners */
+      background-color: #f4f4f4; /* Background color to match the design */
+      padding: 5px;
+    }
+    .audio-controls audio {
+      width: 100%;
+    }
+    .table-container {
+      background-color: white; /* Optional: For the white background */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: To add the shadow effect */
+      padding: 20px;
+      border-radius: 10px; /* For rounded corners */
+    }
+  </style>
+
 </head>
 <body>
 
@@ -361,6 +394,47 @@
 </div>
 </section>
 <!-- End image carousel -->
+
+  <section class="section">
+    <div class="container table-container">
+      <h1 class="title has-text-centered">LibriSpeech Samples</h1>
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th>Text</th>
+            <th>Speaker Prompt</th>
+            <th>Ground Truth</th>
+            <th>VALL-E</th>
+            <th>LibriTTS Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>They moved thereafter cautiously about the hut groping before...</td>
+            <td class="audio-controls"><audio controls><source src="audio/speaker_prompt_1.mp3" type="audio/mp3"></audio></td>
+            <td class="audio-controls"><audio controls><source src="audio/ground_truth_1.mp3" type="audio/mp3"></audio></td>
+            <td class="audio-controls"><audio controls><source src="audio/valle_1.mp3" type="audio/mp3"></audio></td>
+            <td class="audio-controls"><audio controls><source src="audio/libritts_1.mp3" type="audio/mp3"></audio></td>
+          </tr>
+          <tr>
+            <td>And lay me down in thy cold bed and leave my shining lot...</td>
+            <td class="audio-controls"><audio controls><source src="audio/speaker_prompt_2.mp3" type="audio/mp3"></audio></td>
+            <td class="audio-controls"><audio controls><source src="audio/ground_truth_2.mp3" type="audio/mp3"></audio></td>
+            <td class="audio-controls"><audio controls><source src="audio/valle_2.mp3" type="audio/mp3"></audio></td>
+            <td class="audio-controls"><audio controls><source src="audio/libritts_2.mp3" type="audio/mp3"></audio></td>
+          </tr>
+          <tr>
+            <td>Number ten, fresh nelly is waiting on you, good night husband...</td>
+            <td class="audio-controls"><audio controls><source src="audio/speaker_prompt_3.mp3" type="audio/mp3"></audio></td>
+            <td class="audio-controls"><audio controls><source src="audio/ground_truth_3.mp3" type="audio/mp3"></audio></td>
+            <td class="audio-controls"><audio controls><source src="audio/valle_3.mp3" type="audio/mp3"></audio></td>
+            <td class="audio-controls"><audio controls><source src="audio/libritts_3.mp3" type="audio/mp3"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
 
 
 
