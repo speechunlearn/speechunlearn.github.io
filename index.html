@@ -106,7 +106,11 @@
     }
     .carousel-container {
       position: relative;
-      padding: 20px;
+      padding: 40px 20px; /* Ensure enough padding for top and bottom shadows */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Outer shadow for container */
+      border-radius: 10px;
+      background-color: white;
+      overflow: visible; /* Ensure no clipping of shadows */
     }
     .carousel-item {
       margin-right: 20px; /* Adjust this value to add more or less space between slides */
