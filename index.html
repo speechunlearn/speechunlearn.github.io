@@ -72,13 +72,14 @@
   <style>
     /* Custom styles for the table and audio controls */
     table {
-      width: 100%;
+      width: 90%;
       border-collapse: collapse;
       margin-top: 20px;
     }
     th, td {
       padding: 10px;
       text-align: center;
+      border-bottom: 1px solid #ddd;
     }
     th {
       font-weight: bold;
@@ -392,32 +393,26 @@
             <th>Text Prompt</th>
             <th>Speaker Prompt</th>
             <th>Ground Truth</th>
-            <th>VALL-E</th>
+            <th>SGU</th>
             <th>TGU</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>They moved thereafter cautiously about the hut groping before...</td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+            <td rowspan="3">They moved thereafter cautiously about the hut groping before...</td>
+            <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/src.wav" type="audio/wav"></audio></td>
+            <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
+            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
           </tr>
           <tr>
-            <td>And lay me down in thy cold bed and leave my shining lot...</td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
+            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
           </tr>
           <tr>
-            <td>Number ten, fresh nelly is waiting on you, good night husband...</td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-          </tr>
+            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
+            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+            </tr>
         </tbody>
       </table>
     </div>
@@ -436,21 +431,37 @@
             <table class="table is-fullwidth">
               <thead>
                 <tr>
-                  <th>Text</th>
-                  <th>Speaker Prompt</th>
                   <th>Ground Truth</th>
-                  <th>VALL-E</th>
-                  <th>LibriTTS Model</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU</th>
+                  <th>TGU</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>They moved thereafter cautiously about the hut groping before...</td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                </tr>
+              <tr>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+              </tr>
               </tbody>
             </table>
           </div>
@@ -462,21 +473,37 @@
             <table class="table is-fullwidth">
               <thead>
                 <tr>
-                  <th>Text</th>
-                  <th>Speaker Prompt</th>
                   <th>Ground Truth</th>
-                  <th>VALL-E</th>
-                  <th>LibriTTS Model</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU</th>
+                  <th>TGU</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>And lay me down in thy cold bed and leave my shining lot...</td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                </tr>
+              <tr>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+              </tr>
               </tbody>
             </table>
           </div>
@@ -488,21 +515,37 @@
             <table class="table is-fullwidth">
               <thead>
                 <tr>
-                  <th>Text</th>
-                  <th>Speaker Prompt</th>
                   <th>Ground Truth</th>
-                  <th>VALL-E</th>
-                  <th>LibriTTS Model</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU</th>
+                  <th>TGU</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Number ten, fresh nelly is waiting on you, good night husband...</td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                  <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                </tr>
+              <tr>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+              </tr>
               </tbody>
             </table>
           </div>
