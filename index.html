@@ -113,6 +113,10 @@
       vertical-align: middle;
       border-bottom: 2px solid #ddd;
     }
+    .carousel {
+      padding: 20px; /* Space around the carousel items */
+      overflow: visible; /* Ensure no clipping of shadows */
+    }
     .carousel-container {
       position: relative;
       padding: 40px 20px; /* Ensure enough padding for top and bottom shadows */
@@ -122,6 +126,9 @@
     .carousel-item {
       margin-right: 20px; /* Adjust this value to add more or less space between slides */
       margin-left: 20pk;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Shadow for the carousel items */
+      border-radius: 10px; /* To match the rounded style */
+      background-color: white; /* Background of the table should be white */
     }
     .table-title {
       font-size: 1.25rem;
@@ -137,7 +144,7 @@
       color: #5a5e66; /* Lighter grey color for text */
       line-height: 1.5; /* Space between lines */
     }
-    
+
     .table-explanation {
       font-size: 1rem;        /* Adjust font size */
       color: #5a5e66;         /* Darker grey color for paragraph */
