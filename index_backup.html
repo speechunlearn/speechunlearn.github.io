@@ -77,6 +77,7 @@
       background-color: white;
       border-collapse: collapse;
       margin-top: 20px;
+      border-bottom: 2px solid #ddd;
     }
     th, td {
       padding: 10px;
@@ -84,7 +85,7 @@
       border-bottom: 1px solid #ddd;
     }
     tr:last-child td {
-      border-bottom: none; /* Remove the bottom border of the last row */
+      border-bottom: 2px solid #ddd;
     }
     td {
       border-bottom: 2px solid #ddd; /* Adjust the thickness as needed */
@@ -277,114 +278,6 @@
   </div>
 </section>
 
-<!--  <section class="section hero is-light">-->
-<!--  <div class="container is-max-desktop">-->
-
-<!--    <div class="column is-four-fifths">-->
-<!--      <h2 class="title is-3">Audio Comparison Samples</h2>-->
-<!--      <div class="content has-text-justified">-->
-<!--        &lt;!&ndash; Add audio comparison table here &ndash;&gt;-->
-<!--        <table class="table is-bordered">-->
-<!--          <thead>-->
-<!--          <tr>-->
-<!--            <th>Input Source</th>-->
-<!--            <th>Input Prompt</th>-->
-<!--            <th>Ground Truth</th>-->
-<!--            <th>SGU</th>-->
-<!--            <th>TGU</th>-->
-<!--          </tr>-->
-<!--          </thead>-->
-<!--          <tbody>-->
-<!--          <tr>-->
-<!--            <td>Forget Set</td>-->
-<!--            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>-->
-<!--            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>-->
-<!--            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>-->
-<!--            <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>-->
-<!--          </tr>-->
-<!--          </tbody>-->
-<!--        </table>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-
-<!--<section class="section hero is-light">-->
-<!--  <div class="hero-body">-->
-<!--    <h2 class="title is-3">Audio Comparison Carousel</h2>-->
-<!--    <div id="carousel-demo" class="carousel">-->
-<!--      &lt;!&ndash; First Audio Table (Set 1) &ndash;&gt;-->
-<!--      <div class="carousel-item">-->
-<!--        <table class="table is-bordered is-fullwidth">-->
-<!--          <thead>-->
-<!--            <tr>-->
-<!--              <th>Text</th>-->
-<!--              <th>Speaker Prompt</th>-->
-<!--              <th>Ground Truth</th>-->
-<!--              <th>VALL-E</th>-->
-<!--              <th>LibriTTS Model</th>-->
-<!--            </tr>-->
-<!--          </thead>-->
-<!--          <tbody>-->
-<!--            <tr>-->
-<!--              <td>Example</td>-->
-<!--              <td><audio controls><source src="static/audio/speaker_prompt_1.wav" type="audio/wav"></audio></td>-->
-<!--              <td><audio controls><source src="static/audio/ground_truth_1.wav" type="audio/wav"></audio></td>-->
-<!--              <td><audio controls><source src="static/audio/valle_1.wav" type="audio/wav"></audio></td>-->
-<!--              <td><audio controls><source src="static/audio/libritts_1.wav" type="audio/wav"></audio></td>-->
-<!--            </tr>-->
-<!--          </tbody>-->
-<!--        </table>-->
-<!--      </div>-->
-<!--      &lt;!&ndash; Second Audio Table (Set 2) &ndash;&gt;-->
-<!--      <div class="carousel-item">-->
-<!--        <table class="table is-bordered is-fullwidth">-->
-<!--          <thead>-->
-<!--            <tr>-->
-<!--              <th>Text</th>-->
-<!--              <th>Speaker Prompt</th>-->
-<!--              <th>Ground Truth</th>-->
-<!--              <th>VALL-E</th>-->
-<!--              <th>LibriTTS Model</th>-->
-<!--            </tr>-->
-<!--          </thead>-->
-<!--          <tbody>-->
-<!--            <tr>-->
-<!--              <td>Example</td>-->
-<!--              <td><audio controls><source src="static/audio/speaker_prompt_2.wav" type="audio/wav"></audio></td>-->
-<!--              <td><audio controls><source src="static/audio/ground_truth_2.wav" type="audio/wav"></audio></td>-->
-<!--              <td><audio controls><source src="static/audio/valle_2.wav" type="audio/wav"></audio></td>-->
-<!--              <td><audio controls><source src="static/audio/libritts_2.wav" type="audio/wav"></audio></td>-->
-<!--            </tr>-->
-<!--          </tbody>-->
-<!--        </table>-->
-<!--      </div>-->
-<!--      &lt;!&ndash; Third Audio Table (Set 3) &ndash;&gt;-->
-<!--      <div class="carousel-item">-->
-<!--        <table class="table is-bordered is-fullwidth">-->
-<!--          <thead>-->
-<!--            <tr>-->
-<!--              <th>Text</th>-->
-<!--              <th>Speaker Prompt</th>-->
-<!--              <th>Ground Truth</th>-->
-<!--              <th>VALL-E</th>-->
-<!--              <th>LibriTTS Model</th>-->
-<!--            </tr>-->
-<!--          </thead>-->
-<!--          <tbody>-->
-<!--            <tr>-->
-<!--              <td>Example</td>-->
-<!--              <td><audio controls><source src="static/audio/speaker_prompt_3.wav" type="audio/wav"></audio></td>-->
-<!--              <td><audio controls><source src="static/audio/ground_truth_3.wav" type="audio/wav"></audio></td>-->
-<!--              <td><audio controls><source src="static/audio/valle_3.wav" type="audio/wav"></audio></td>-->
-<!--              <td><audio controls><source src="static/audio/libritts_3.wav" type="audio/wav"></audio></td>-->
-<!--            </tr>-->
-<!--          </tbody>-->
-<!--        </table>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
 
 
   <!-- Teaser video-->
@@ -524,6 +417,7 @@
         <!-- Second Slide -->
         <div class="carousel-item">
           <div class="table-container">
+            <h2 class="table-title">LibriHeavy Forget Speaker 2</h2>
             <table class="table is-fullwidth">
                 <thead>
                   <tr>
@@ -561,6 +455,7 @@
         <!-- Third Slide -->
         <div class="carousel-item">
           <div class="table-container">
+            <h2 class="table-title">LibriHeavy Forget Speaker 3</h2>
             <table class="table is-fullwidth">
                 <thead>
                   <tr>
@@ -597,6 +492,7 @@
         <!-- Fourth Slide -->
         <div class="carousel-item">
           <div class="table-container">
+            <h2 class="table-title">LibriHeavy Forget Speaker 4</h2>
             <table class="table is-fullwidth">
                 <thead>
                   <tr>
