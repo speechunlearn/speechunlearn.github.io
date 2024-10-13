@@ -624,42 +624,70 @@
         <div class="carousel-item">
           <div class="table-container">
             <table class="table is-fullwidth">
-              <h2 class="table-title">LibriHeavy Forget Speaker 4</h2>
-              <thead>
-                <tr>
-                  <th>Ground Truth</th>
-                  <th>Original</th>
-                  <th>Negative Gradient</th>
-                  <th>KL Loss</th>
-                  <th>SGU</th>
-                  <th>TGU</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
-              </tr>
-              <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
-              </tr>
-              <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
-              </tr>
-              </tbody>
-            </table>
+                <thead>
+                  <tr>
+                    <th>Text Prompt</th>
+                    <th>Speaker Prompt</th>
+                    <th>Ground Truth</th>
+                    <th>SGU</th>
+                    <th>TGU</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+<!--            <table class="table is-fullwidth">-->
+<!--              <h2 class="table-title">LibriHeavy Forget Speaker 4</h2>-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <th>Ground Truth</th>-->
+<!--                  <th>Original</th>-->
+<!--                  <th>Negative Gradient</th>-->
+<!--                  <th>KL Loss</th>-->
+<!--                  <th>SGU</th>-->
+<!--                  <th>TGU</th>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
             <p class="table-explanation">
                 This table compares the output of several models, including Ground Truth, Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriHeavy Forget Speaker 4 scenario.
             </p>
