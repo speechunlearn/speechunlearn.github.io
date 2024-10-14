@@ -73,24 +73,34 @@
   <style>
     /* Custom styles for the table and audio controls */
     table {
-      width: 90%;
+      width: 100%; /* Ensure the table takes the full width */
       background-color: white;
       border-collapse: collapse;
       margin-top: 20px;
+      border: none; /* Explicitly remove any outer border */
     }
+
     th, td {
       padding: 10px;
       text-align: center;
-      border-bottom: none;
-      border: none;
+      border: none !important; /* Use !important to force no borders */
     }
-    td {
-      border-bottom: none;
-      border: none;
+
+    tr {
+      border: none !important; /* Remove borders around rows */
     }
+
+    thead, tbody {
+      border: none !important; /* Ensure no borders in the header or body */
+    }
+
     th {
       font-weight: bold;
-      border-bottom: none;
+      border: none !important; /* Remove borders from table headers */
+    }
+
+    td {
+      border: none !important; /* Ensure no borders in table cells */
     }
     .audio-controls {
       display: inline-block;
