@@ -83,20 +83,21 @@
     th, td {
       padding: 10px;
       text-align: center;
-      border: none !important; /* Use !important to force no borders */
-    }
-
-    tr {
-      border: none !important; /* Remove borders around rows */
     }
 
     thead, tbody {
       border: none !important; /* Ensure no borders in the header or body */
     }
 
+    /* Add a bold border under the header row */
     th {
       font-weight: bold;
-      border: none !important; /* Remove borders from table headers */
+      border-bottom: 2px solid #333; /* Add a border under the header */
+    }
+
+    /* Add a border between each row */
+    tr {
+      border-bottom: 1px solid #ddd; /* Add a lighter border between rows */
     }
 
     td {
