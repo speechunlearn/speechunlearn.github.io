@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Do Not Mimic My Voice : Teacher-Guided Unlearning for Zero-Shot Text-to-Speech">
+  <meta property="og:title" content="Do Not Mimic My Voice : Teacher-Guided Unlearning for Zero-Shot Text-to-Speech"/>
+  <meta property="og:description" content="In this paper, we introduce the first machine unlearning framework for ZS-TTS, Teacher-Guided Unlearning (TGU), designed to ensure that the model forgets designated speaker identities while retaining its ability to generate accurate speech for other speakers. Unlike conventional unlearning methods, TGU leverages randomness to prevent consistent replication of forget speakers' voices, ensuring unlearned identities remain untraceable. Additionally, we propose a new evaluation metric, speaker-Zero Retrain Forgetting (spk-ZRF), which measures the model’s effectiveness in preventing the reproduction of forgotten voices. The experiments conducted on the state-of-the-art model demonstrate that TGU prevents the model from replicating forget speakers' voices while maintaining high quality for other speakers."/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Do Not Mimic My Voice : Teacher-Guided Unlearning for Zero-Shot Text-to-Speech">
+  <meta name="twitter:description" content="In this paper, we introduce the first machine unlearning framework for ZS-TTS, Teacher-Guided Unlearning (TGU), designed to ensure that the model forgets designated speaker identities while retaining its ability to generate accurate speech for other speakers. Unlike conventional unlearning methods, TGU leverages randomness to prevent consistent replication of forget speakers' voices, ensuring unlearned identities remain untraceable. Additionally, we propose a new evaluation metric, speaker-Zero Retrain Forgetting (spk-ZRF), which measures the model’s effectiveness in preventing the reproduction of forgotten voices. The experiments conducted on the state-of-the-art model demonstrate that TGU prevents the model from replicating forget speakers' voices while maintaining high quality for other speakers.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/Figure1_Final.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>DO NOT MIMIC MY VOICE: TARGET-GUIDED UNLEARNING FOR ZERO-SHOT TEXT-TO-SPEECH</title>
+<!--  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">-->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+    <!-- Include Bulma CSS -->
+<!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">-->
+  <!-- Include Bulma Carousel CSS -->
+<!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.0/dist/css/bulma-carousel.min.css">-->
+
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+
+
+  <style>
+
+    .small-audio {
+      width: 120px; /* Adjust width to make it smaller */
+      height: 30px; /* Adjust height */
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .small-audio::-webkit-media-controls {
+      background-color: #f5f5f5; /* Change background color to match the design */
+    }
+
+    .small-audio::-webkit-media-controls-panel {
+      background-color: #f5f5f5; /* Panel background color */
+    }
+  </style>
+
+  <style>
+    /* Custom styles for the table and audio controls */
+    table {
+      width: 100%; /* Ensure the table takes the full width */
+      background-color: white;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border: none; /* Explicitly remove any outer border */
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd; /* Add vertical borders between columns */
+    }
+
+    thead, tbody {
+      border: none !important; /* Ensure no borders in the header or body */
+    }
+
+    /* Add a bold border under the header row */
+    th {
+      font-weight: bold;
+      border-bottom: 2px solid #333; /* Add a border under the header */
+    }
+
+    /* Add a border between each row */
+    tr {
+      border-bottom: 1px solid #ddd; /* Add a lighter border between rows */
+    }
+
+    td {
+      border: none !important; /* Ensure no borders in table cells */
+    }
+    .audio-controls {
+      display: inline-block;
+      width: 120px; /* Adjust this width for smaller or larger controls */
+      border-radius: 20px; /* Rounded corners */
+      background-color: #f4f4f4; /* Background color to match the design */
+      padding: 5px;
+    }
+    .audio-controls audio {
+      width: 100%;
+    }
+    .table-container {
+      background-color: white; /* Optional: For the white background */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Optional: To add the shadow effect */
+      padding: 20px;
+      border-radius: 10px; /* For rounded corners */
+    }
+    td[rowspan] {
+      vertical-align: middle;
+      border-bottom: 2px solid #ddd;
+    }
+    .carousel {
+      padding: 20px; /* Space around the carousel items */
+      overflow: visible; /* Ensure no clipping of shadows */
+    }
+    .carousel-container {
+      position: relative;
+      padding: 40px 20px; /* Ensure enough padding for top and bottom shadows */
+      background-color: #d9d9d9;
+      overflow: visible; /* Ensure no clipping of shadows */
+    }
+    .carousel-item {
+      margin-right: 15px; /* Adjust this value to add more or less space between slides */
+      margin-left: 15pk;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Shadow for the carousel items */
+      border-radius: 10px; /* To match the rounded style */
+      background-color: white; /* Background of the table should be white */
+      overflow: visible !important
+      min-width: 100%; /* Ensures the slide takes up full width */
+    }
+    .carousel .carousel-item {
+      margin: 10px;
+      overflow: visible !important; /* Ensure shadows are not clipped between slides */
+    }
+    .table-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    /* Text and Font Styles */
+    .paragraph {
+      font-size: 1.25rem;
+      font-weight: 400; /* Normal weight */
+      color: #5a5e66; /* Lighter grey color for text */
+      line-height: 1.5; /* Space between lines */
+    }
+
+    .table-explanation {
+      font-size: 1rem;        /* Adjust font size */
+      color: #5a5e66;         /* Darker grey color for paragraph */
+      line-height: 1.5;       /* Space between lines */
+      margin-top: 20px;       /* Add margin to separate from the table */
+      text-align: left;       /* Align text to the left for better readability */
+      max-width: 800px;       /* Optional: limit the width for better layout */
+    }
+  </style>
+
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Do Not Mimic My Voice: Teacher-Guided Unlearning for Zero-Shot Text-to-Speech</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous Submission</a><sup>*</sup>,</span>
+<!--                <span class="author-block">-->
+<!--                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>-->
+<!--                  <span class="author-block">-->
+<!--                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>-->
+<!--                  </span>-->
+                  </div>
+
+<!--                  <div class="is-size-5 publication-authors">-->
+<!--                    <span class="author-block">Institution Name<br>Conferance name and year</span>-->
+<!--                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
+<!--                  </div>-->
+                      <div class="is-size-5 publication-authors">
+                        <span class="author-block">Submitted to The Thirteenth International Conference on Learning Representations</span>
+                      </div>
+<!--                  <div class="column has-text-centered">-->
+<!--                    <div class="publication-links">-->
+<!--                         &lt;!&ndash; Arxiv PDF link &ndash;&gt;-->
+<!--                      <span class="link-block">-->
+<!--                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"-->
+<!--                        class="external-link button is-normal is-rounded is-dark">-->
+<!--                        <span class="icon">-->
+<!--                          <i class="fas fa-file-pdf"></i>-->
+<!--                        </span>-->
+<!--                        <span>Paper</span>-->
+<!--                      </a>-->
+<!--                    </span>-->
+
+<!--                    &lt;!&ndash; Supplementary PDF link &ndash;&gt;-->
+<!--                    <span class="link-block">-->
+<!--                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"-->
+<!--                      class="external-link button is-normal is-rounded is-dark">-->
+<!--                      <span class="icon">-->
+<!--                        <i class="fas fa-file-pdf"></i>-->
+<!--                      </span>-->
+<!--                      <span>Supplementary</span>-->
+<!--                    </a>-->
+<!--                  </span>-->
+
+<!--                  &lt;!&ndash; Github link &ndash;&gt;-->
+<!--                  <span class="link-block">-->
+<!--                    <a href="https://github.com/YOUR REPO HERE" target="_blank"-->
+<!--                    class="external-link button is-normal is-rounded is-dark">-->
+<!--                    <span class="icon">-->
+<!--                      <i class="fab fa-github"></i>-->
+<!--                    </span>-->
+<!--                    <span>Code</span>-->
+<!--                  </a>-->
+<!--                </span>-->
+
+                <!-- ArXiv abstract Link -->
+<!--                <span class="link-block">-->
+<!--                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"-->
+<!--                  class="external-link button is-normal is-rounded is-dark">-->
+<!--                  <span class="icon">-->
+<!--                    <i class="ai ai-arxiv"></i>-->
+<!--                  </span>-->
+<!--                  <span>arXiv</span>-->
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The rapid advancement of Zero-Shot Text-to-Speech (ZS-TTS) technology has enabled high-fidelity voice synthesis from minimal audio cues, raising significant privacy and ethical concerns. In particular, the ability to replicate an individual’s voice without consent poses risks, highlighting the need for machine unlearning techniques to protect voice privacy. In this paper, we introduce the first machine unlearning framework for ZS-TTS, Teacher-Guided Unlearning (TGU), designed to ensure that the model forgets designated speaker identities while retaining its ability to generate accurate speech for other speakers. Unlike conventional unlearning methods, TGU leverages randomness to prevent consistent replication of forget speakers' voices, ensuring unlearned identities remain untraceable. Additionally, we propose a new evaluation metric, speaker-Zero Retrain Forgetting (spk-ZRF), which measures the model’s effectiveness in preventing the reproduction of forgotten voices. The experiments conducted on the state-of-the-art model demonstrate that TGU prevents the model from replicating forget speakers' voices while maintaining high quality for other speakers.
+          </p>
+<!--          <img src="static/images/Figure1_Final.png" alt="A descriptive caption" style="max-width:100%; height:auto;">-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Main Figure</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="main-figure">
+            <img src="static/images/Figure2_Final.png" alt="A descriptive caption" style="max-width:100%; height:auto;">
+            <figcaption>The training procedure for the forget set in (a) the naive SGU framework and (b) the proposed TGU framework, along with (c) the training procedure for the remain set in both SGU and TGU.</figcaption>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Teaser video-->
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body">-->
+<!--      <video poster="" id="tree" autoplay controls muted loop height="100%">-->
+<!--        &lt;!&ndash; Your video here &ndash;&gt;-->
+<!--        <source src="static/videos/banner_video.mp4"-->
+<!--        type="video/mp4">-->
+<!--      </video>-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.-->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End teaser video -->
+
+<!-- Image carousel -->
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--       <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--          First audio description.-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--      <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--          Second image description.-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--      <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--         Third image description.-->
+<!--       </h2>-->
+<!--     </div>-->
+<!--     <div class="item">-->
+<!--      &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Fourth image description.-->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+<!-- End image carousel -->
+
+
+    <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Our Methods on Forget Speakers</h1>
+
+      <!-- Carousel container -->
+      <div id="carousel-demo" class="carousel">
+
+        <!-- First Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriHeavy Forget Speaker 1</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>Audio Prompt</th>
+                    <th>*Sample to Forget</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *Sample to Forget refers to an actual audio file spoken by Forget Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+        <!-- Second Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriHeavy Forget Speaker 2</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                    <th>Target Text</th>
+                    <th>Audio Prompt</th>
+                    <th>*Sample to Forget</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">If he falls in my way I shall tell him my mind. If he don't fall in my way I shan't for it won't be worth my while to do it.</td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *Sample to Forget refers to an actual audio file spoken by Forget Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+        <!-- Third Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriHeavy Forget Speaker 3</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>Audio Prompt</th>
+                    <th>*Sample to Forget</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">I contend then, that the true place to fight the battle is in the union, and within the provisions of the constitution.</td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *Sample to Forget refers to an actual audio file spoken by Forget Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+        <!-- Fourth Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriHeavy Forget Speaker 4</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>Audio Prompt</th>
+                    <th>Sample to Forget</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">Through these the ends of the bars passing across the door were placed. Which if anything made the opening when closed and fastened inside stronger than any other portion of the structure.</td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *Sample to Forget refers to an actual audio file spoken by Forget Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+      <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Our Methods on Remain Speakers</h1>
+
+      <!-- Carousel container -->
+      <div id="carousel-demo" class="carousel">
+
+        <!-- First Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 1</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>Audio Prompt</th>
+                    <th>*Sample to Remain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>They then renewed their journey and under the better light made a safe crossing of the stable roofs.</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *Sample to Remain refers to an actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+        <!-- Second Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 2</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>Audio Prompt</th>
+                    <th>*Sample to Remain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>...and towards Christmas, he was one of the first that was cut down.</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *Sample to Remain refers to an actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+        <!-- Third Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 3</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>Audio Prompt</th>
+                    <th>*Sample to Remain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Other circumstances permitting, that instinct disposes men to look with favor upon productive efficiency and on whatever is of human use.</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *Sample to Remain refers to an actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+        <!-- Fourth Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 4</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>Audio Prompt</th>
+                    <th>*Sample to Remain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>He darted like an arrow through all the halls, down all the stairs, and across the yard.</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *Sample to Remain refers to an actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Baseline Comparison on Forget Speakers</h1>
+
+      <!-- Carousel container -->
+      <div id="carousel-demo" class="carousel">
+
+        <!-- First Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriHeavy Forget Speaker 1</h2>
+            <table class="table is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Target Text</th>
+                  <th>Audio Prompt</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU (Ours)</th>
+                  <th>TGU (Ours)</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+              </tr>
+              </tbody>
+            </table>
+            <p class="table-explanation">
+                This table compares the output of several models, including Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriHeavy Forget Speaker 1.
+            </p>
+          </div>
+        </div>
+
+        <!-- Second Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <h2 class="table-title">LibriHeavy Forget Speaker 2</h2>
+              <thead>
+                <tr>
+                  <th>Target Text</th>
+                  <th>Audio Prompt</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU (Ours)</th>
+                  <th>TGU (Ours)</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td rowspan="3">If he falls in my way I shall tell him my mind. If he don't fall in my way I shan't for it won't be worth my while to do it.</td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
+              </tr>
+              </tbody>
+            </table>
+            <p class="table-explanation">
+                This table compares the output of several models, including Ground Truth, Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriHeavy Forget Speaker 2 scenario.
+            </p>
+          </div>
+        </div>
+
+        <!-- Third Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <h2 class="table-title">LibriHeavy Forget Speaker 3</h2>
+              <thead>
+                <tr>
+                  <th>Target Text</th>
+                  <th>Audio Prompt</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU (Ours)</th>
+                  <th>TGU (Ours)</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td rowspan="3">I contend then, that the true place to fight the battle is in the union, and within the provisions of the constitution.</td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>
+              </tr>
+              </tbody>
+            </table>
+            <p class="table-explanation">
+                This table compares the output of several models, including Ground Truth, Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriHeavy Forget Speaker 3 scenario.
+            </p>
+          </div>
+        </div>
+        <!-- Fourth Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <h2 class="table-title">LibriHeavy Forget Speaker 4</h2>
+              <thead>
+                <tr>
+                  <th>Target Text</th>
+                  <th>Audio Prompt</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU (Ours)</th>
+                  <th>TGU (Ours)</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td rowspan="3">Through these the ends of the bars passing across the door were placed. Which if anything made the opening when closed and fastened inside stronger than any other portion of the structure.</td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
+              </tr>
+              </tbody>
+            </table>
+            <p class="table-explanation">
+                This table compares the output of several models, including Ground Truth, Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriHeavy Forget Speaker 4 scenario.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Baseline Comparison on Remain Speakers</h1>
+
+      <!-- Carousel container -->
+      <div id="carousel-demo" class="carousel">
+
+        <!-- First Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 1</h2>
+            <table class="table is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Target Text</th>
+                  <th>Audio Prompt</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU (Ours)</th>
+                  <th>TGU (Ours)</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>They then renewed their journey and under the better light made a safe crossing of the stable roofs.</td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Second Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <h2 class="table-title">LibriSpeech Remain Speaker 2</h2>
+              <thead>
+                <tr>
+                  <th>Target Text</th>
+                  <th>Audio Prompt</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU (Ours)</th>
+                  <th>TGU (Ours)</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>...and towards Christmas, he was one of the first that was cut down.</td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Third Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <h2 class="table-title">LibriSpeech Remain Speaker 3</h2>
+              <thead>
+                <tr>
+                  <th>Target Text</th>
+                  <th>Audio Prompt</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU (Ours)</th>
+                  <th>TGU (Ours)</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Other circumstances permitting, that instinct disposes men to look with favor upon productive efficiency and on whatever is of human use.</td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Fourth Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <table class="table is-fullwidth">
+              <h2 class="table-title">LibriSpeech Remain Speaker 4</h2>
+              <thead>
+                <tr>
+                  <th>Target Text</th>
+                  <th>Audio Prompt</th>
+                  <th>Original</th>
+                  <th>Negative Gradient</th>
+                  <th>KL Loss</th>
+                  <th>SGU (Ours)</th>
+                  <th>TGU (Ours)</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>He darted like an arrow through all the halls, down all the stairs, and across the yard.</td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- Youtube video -->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
+<!--      <h2 class="title is-3">Video Presentation</h2>-->
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-four-fifths">-->
+<!--          -->
+<!--          <div class="publication-video">-->
+<!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
+<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title is-3">Another Carousel</h2>-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="item item-video1">-->
+<!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel1.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video2">-->
+<!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel2.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video3">-->
+<!--          <video poster="" id="video3" autoplay controls muted loop height="100%">\-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel3.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title">Poster</h2>-->
+
+<!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
+<!--          </iframe>-->
+<!--        -->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{
+        anonymous2024do,
+        title={Do Not Mimic My Voice: Teacher-Guided Unlearning for Zero-Shot Text-to-Speech},
+        author={Anonymous},
+        booktitle={Submitted to The Thirteenth International Conference on Learning Representations},
+        year={2024},
+        url={https://openreview.net/forum?id=v9LjNopQ6W},
+        note={under review}
+        }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      bulmaCarousel.attach('#carousel-demo', {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        loop: true,
+        autoplay: false, // Set to true if you want it to autoplay
+        duration: 300, // Speed of the transition
+      });
+    });
+  </script>
+
+  </body>
+  </html>
