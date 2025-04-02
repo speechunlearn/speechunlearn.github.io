@@ -349,6 +349,8 @@
     <section class="section">
     <div class="container">
       <h1 class="title has-text-centered">Our Methods on Forget Speakers</h1>
+      <h2 class="title is-4 has-text-centered">Model Pre-trained on LibriHeavy</h2>
+
 
       <!-- Carousel container -->
       <div id="carousel-demo" class="carousel">
@@ -369,18 +371,18 @@
                 <tbody>
                   <tr>
                     <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>
-                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/prompt.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/SGU_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/TGU_0.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/SGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/TGU_1.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/SGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/TGU_2.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -543,6 +545,165 @@
       </div>
     </div>
   </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-4 has-text-centered">Model Pre-trained on LibriTTS (Updating)</h2>
+
+
+      <!-- Carousel container -->
+      <div id="carousel-demo" class="carousel">
+        <!-- First Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriTTS Forget Speaker 1</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Forget</th>
+<!--                    <th>SGU (Ours)</th>-->
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Forget Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+        <!-- Second Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriTTS Forget Speaker 2</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Forget</th>
+<!--                    <th>SGU (Ours)</th>-->
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">If he falls in my way I shall tell him my mind. If he don't fall in my way I shan't for it won't be worth my while to do it.</td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Forget Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+        <!-- Third Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriTTS Forget Speaker 3</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Forget</th>
+<!--                    <th>SGU (Ours)</th>-->
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">I contend then, that the true place to fight the battle is in the union, and within the provisions of the constitution.</td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Forget Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+        <!-- Fourth Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriTTS Forget Speaker 4</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Forget</th>
+<!--                    <th>SGU (Ours)</th>-->
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">Through these the ends of the bars passing across the door were placed. Which if anything made the opening when closed and fastened inside stronger than any other portion of the structure.</td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>-->
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Forget Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
       <section class="section">
     <div class="container">
       <h1 class="title has-text-centered">Our Methods on Remain Speakers</h1>
@@ -675,10 +836,12 @@
 
   <section class="section">
     <div class="container">
-      <h1 class="title has-text-centered">LibriHeavy-Trained Baseline Comparison on Forget Speakers</h1>
+      <h1 class="title has-text-centered">Baseline Comparison on Forget Speakers</h1>
+      <h2 class="title is-4 has-text-centered">Model Pre-trained on LibriHeavy</h2>
 
       <!-- Carousel container -->
       <div id="carousel-demo" class="carousel">
+
 
         <!-- First Slide -->
         <div class="carousel-item">
@@ -877,7 +1040,7 @@
 
   <section class="section">
     <div class="container">
-      <h1 class="title has-text-centered">LibriHeavy-Trained Baseline Comparison on Remain Speakers</h1>
+      <h1 class="title has-text-centered">Baseline Comparison on Remain Speakers</h1>
 
       <!-- Carousel container -->
       <div id="carousel-demo" class="carousel">
@@ -1008,341 +1171,341 @@
       </div>
     </div>
   </section>
-  <section class="section">
-    <div class="container">
-      <h1 class="title has-text-centered">LibriTTS-Trained Baseline Comparison on Forget Speakers</h1>
+<!--  <section class="section">-->
+<!--    <div class="container">-->
+<!--      <h1 class="title has-text-centered">LibriTTS-Trained Baseline Comparison on Forget Speakers</h1>-->
 
-      <!-- Carousel container -->
-      <div id="carousel-demo" class="carousel">
+<!--      &lt;!&ndash; Carousel container &ndash;&gt;-->
+<!--      <div id="carousel-demo" class="carousel">-->
 
-        <!-- First Slide -->
-        <div class="carousel-item">
-          <div class="table-container">
-            <h2 class="table-title">LibriTTS Forget Speaker 1</h2>
-            <table class="table is-fullwidth">
-              <thead>
-                <tr>
-                  <th>Target Text</th>
-                  <th>*Audio Prompt</th>
-                  <th>Original</th>
-                  <th>Negative Gradient</th>
-                  <th>KL Loss</th>
-                  <th>SGU (Ours)</th>
-                  <th>TGU (Ours)</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>
-                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
-              </tr>
-              <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
-              </tr>
-              <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
-              </tr>
-              </tbody>
-            </table>
-            <p class="table-explanation">
-                This table compares the output of several models, including Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriTTS Forget Speaker 1.
-            </p>
-          </div>
-        </div>
+<!--        &lt;!&ndash; First Slide &ndash;&gt;-->
+<!--        <div class="carousel-item">-->
+<!--          <div class="table-container">-->
+<!--            <h2 class="table-title">LibriTTS Forget Speaker 1</h2>-->
+<!--            <table class="table is-fullwidth">-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <th>Target Text</th>-->
+<!--                  <th>*Audio Prompt</th>-->
+<!--                  <th>Original</th>-->
+<!--                  <th>Negative Gradient</th>-->
+<!--                  <th>KL Loss</th>-->
+<!--                  <th>SGU (Ours)</th>-->
+<!--                  <th>TGU (Ours)</th>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>-->
+<!--                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--            <p class="table-explanation">-->
+<!--                This table compares the output of several models, including Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriTTS Forget Speaker 1.-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
 
-        <!-- Second Slide -->
-        <div class="carousel-item">
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <h2 class="table-title">LibriTTS Forget Speaker 2</h2>
-              <thead>
-                <tr>
-                  <th>Target Text</th>
-                  <th>*Audio Prompt</th>
-                  <th>Original</th>
-                  <th>Negative Gradient</th>
-                  <th>KL Loss</th>
-                  <th>SGU (Ours)</th>
-                  <th>TGU (Ours)</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td rowspan="3">If he falls in my way I shall tell him my mind. If he don't fall in my way I shan't for it won't be worth my while to do it.</td>
-                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
-              </tr>
-              <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
-              </tr>
-              <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
-              </tr>
-              </tbody>
-            </table>
-            <p class="table-explanation">
-                This table compares the output of several models, including Ground Truth, Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriTTS Forget Speaker 2 scenario.
-            </p>
-          </div>
-        </div>
+<!--        &lt;!&ndash; Second Slide &ndash;&gt;-->
+<!--        <div class="carousel-item">-->
+<!--          <div class="table-container">-->
+<!--            <table class="table is-fullwidth">-->
+<!--              <h2 class="table-title">LibriTTS Forget Speaker 2</h2>-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <th>Target Text</th>-->
+<!--                  <th>*Audio Prompt</th>-->
+<!--                  <th>Original</th>-->
+<!--                  <th>Negative Gradient</th>-->
+<!--                  <th>KL Loss</th>-->
+<!--                  <th>SGU (Ours)</th>-->
+<!--                  <th>TGU (Ours)</th>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <td rowspan="3">If he falls in my way I shall tell him my mind. If he don't fall in my way I shan't for it won't be worth my while to do it.</td>-->
+<!--                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--            <p class="table-explanation">-->
+<!--                This table compares the output of several models, including Ground Truth, Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriTTS Forget Speaker 2 scenario.-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
 
-        <!-- Third Slide -->
-        <div class="carousel-item">
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <h2 class="table-title">LibriTTS Forget Speaker 3</h2>
-              <thead>
-                <tr>
-                  <th>Target Text</th>
-                  <th>*Audio Prompt</th>
-                  <th>Original</th>
-                  <th>Negative Gradient</th>
-                  <th>KL Loss</th>
-                  <th>SGU (Ours)</th>
-                  <th>TGU (Ours)</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td rowspan="3">I contend then, that the true place to fight the battle is in the union, and within the provisions of the constitution.</td>
-                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
-              </tr>
-              <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>
-              </tr>
-              <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>
-              </tr>
-              </tbody>
-            </table>
-            <p class="table-explanation">
-                This table compares the output of several models, including Ground Truth, Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriTTS Forget Speaker 3 scenario.
-            </p>
-          </div>
-        </div>
-        <!-- Fourth Slide -->
-        <div class="carousel-item">
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <h2 class="table-title">LibriTTS Forget Speaker 4</h2>
-              <thead>
-                <tr>
-                  <th>Target Text</th>
-                  <th>*Audio Prompt</th>
-                  <th>Original</th>
-                  <th>Negative Gradient</th>
-                  <th>KL Loss</th>
-                  <th>SGU (Ours)</th>
-                  <th>TGU (Ours)</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td rowspan="3">Through these the ends of the bars passing across the door were placed. Which if anything made the opening when closed and fastened inside stronger than any other portion of the structure.</td>
-                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
-              </tr>
-              <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
-              </tr>
-              <tr>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
-              </tr>
-              </tbody>
-            </table>
-            <p class="table-explanation">
-                This table compares the output of several models, including Ground Truth, Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriTTS Forget Speaker 4 scenario.
-            </p>
-          </div>
-        </div>
+<!--        &lt;!&ndash; Third Slide &ndash;&gt;-->
+<!--        <div class="carousel-item">-->
+<!--          <div class="table-container">-->
+<!--            <table class="table is-fullwidth">-->
+<!--              <h2 class="table-title">LibriTTS Forget Speaker 3</h2>-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <th>Target Text</th>-->
+<!--                  <th>*Audio Prompt</th>-->
+<!--                  <th>Original</th>-->
+<!--                  <th>Negative Gradient</th>-->
+<!--                  <th>KL Loss</th>-->
+<!--                  <th>SGU (Ours)</th>-->
+<!--                  <th>TGU (Ours)</th>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <td rowspan="3">I contend then, that the true place to fight the battle is in the union, and within the provisions of the constitution.</td>-->
+<!--                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--            <p class="table-explanation">-->
+<!--                This table compares the output of several models, including Ground Truth, Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriTTS Forget Speaker 3 scenario.-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; Fourth Slide &ndash;&gt;-->
+<!--        <div class="carousel-item">-->
+<!--          <div class="table-container">-->
+<!--            <table class="table is-fullwidth">-->
+<!--              <h2 class="table-title">LibriTTS Forget Speaker 4</h2>-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <th>Target Text</th>-->
+<!--                  <th>*Audio Prompt</th>-->
+<!--                  <th>Original</th>-->
+<!--                  <th>Negative Gradient</th>-->
+<!--                  <th>KL Loss</th>-->
+<!--                  <th>SGU (Ours)</th>-->
+<!--                  <th>TGU (Ours)</th>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <td rowspan="3">Through these the ends of the bars passing across the door were placed. Which if anything made the opening when closed and fastened inside stronger than any other portion of the structure.</td>-->
+<!--                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--            <p class="table-explanation">-->
+<!--                This table compares the output of several models, including Ground Truth, Original, Negative Gradient, KL Loss, SGU, and TGU. The table demonstrates how each model performed for the LibriTTS Forget Speaker 4 scenario.-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
 
-      </div>
-    </div>
-  </section>
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 
-  <section class="section">
-    <div class="container">
-      <h1 class="title has-text-centered">LibriTTS-Trained Baseline Comparison on Remain Speakers</h1>
+<!--  <section class="section">-->
+<!--    <div class="container">-->
+<!--      <h1 class="title has-text-centered">LibriTTS-Trained Baseline Comparison on Remain Speakers</h1>-->
 
-      <!-- Carousel container -->
-      <div id="carousel-demo" class="carousel">
+<!--      &lt;!&ndash; Carousel container &ndash;&gt;-->
+<!--      <div id="carousel-demo" class="carousel">-->
 
-        <!-- First Slide -->
-        <div class="carousel-item">
-          <div class="table-container">
-            <h2 class="table-title">LibriSpeech Remain Speaker 1</h2>
-            <table class="table is-fullwidth">
-              <thead>
-                <tr>
-                  <th>Target Text</th>
-                  <th>*Audio Prompt</th>
-                  <th>Original</th>
-                  <th>Negative Gradient</th>
-                  <th>KL Loss</th>
-                  <th>SGU (Ours)</th>
-                  <th>TGU (Ours)</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>They then renewed their journey and under the better light made a safe crossing of the stable roofs.</td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/original.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/NG.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/KL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/RL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+<!--        &lt;!&ndash; First Slide &ndash;&gt;-->
+<!--        <div class="carousel-item">-->
+<!--          <div class="table-container">-->
+<!--            <h2 class="table-title">LibriSpeech Remain Speaker 1</h2>-->
+<!--            <table class="table is-fullwidth">-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <th>Target Text</th>-->
+<!--                  <th>*Audio Prompt</th>-->
+<!--                  <th>Original</th>-->
+<!--                  <th>Negative Gradient</th>-->
+<!--                  <th>KL Loss</th>-->
+<!--                  <th>SGU (Ours)</th>-->
+<!--                  <th>TGU (Ours)</th>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <td>They then renewed their journey and under the better light made a safe crossing of the stable roofs.</td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/original.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/NG.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/KL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/RL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--          </div>-->
+<!--        </div>-->
 
-        <!-- Second Slide -->
-        <div class="carousel-item">
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <h2 class="table-title">LibriSpeech Remain Speaker 2</h2>
-              <thead>
-                <tr>
-                  <th>Target Text</th>
-                  <th>*Audio Prompt</th>
-                  <th>Original</th>
-                  <th>Negative Gradient</th>
-                  <th>KL Loss</th>
-                  <th>SGU (Ours)</th>
-                  <th>TGU (Ours)</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>...and towards Christmas, he was one of the first that was cut down.</td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/original.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/NG.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/KL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+<!--        &lt;!&ndash; Second Slide &ndash;&gt;-->
+<!--        <div class="carousel-item">-->
+<!--          <div class="table-container">-->
+<!--            <table class="table is-fullwidth">-->
+<!--              <h2 class="table-title">LibriSpeech Remain Speaker 2</h2>-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <th>Target Text</th>-->
+<!--                  <th>*Audio Prompt</th>-->
+<!--                  <th>Original</th>-->
+<!--                  <th>Negative Gradient</th>-->
+<!--                  <th>KL Loss</th>-->
+<!--                  <th>SGU (Ours)</th>-->
+<!--                  <th>TGU (Ours)</th>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <td>...and towards Christmas, he was one of the first that was cut down.</td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/original.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/NG.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/KL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--          </div>-->
+<!--        </div>-->
 
-        <!-- Third Slide -->
-        <div class="carousel-item">
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <h2 class="table-title">LibriSpeech Remain Speaker 3</h2>
-              <thead>
-                <tr>
-                  <th>Target Text</th>
-                  <th>*Audio Prompt</th>
-                  <th>Original</th>
-                  <th>Negative Gradient</th>
-                  <th>KL Loss</th>
-                  <th>SGU (Ours)</th>
-                  <th>TGU (Ours)</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>Other circumstances permitting, that instinct disposes men to look with favor upon productive efficiency and on whatever is of human use.</td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/original.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/NG.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/KL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <!-- Fourth Slide -->
-        <div class="carousel-item">
-          <div class="table-container">
-            <table class="table is-fullwidth">
-              <h2 class="table-title">LibriSpeech Remain Speaker 4</h2>
-              <thead>
-                <tr>
-                  <th>Target Text</th>
-                  <th>*Audio Prompt</th>
-                  <th>Original</th>
-                  <th>Negative Gradient</th>
-                  <th>KL Loss</th>
-                  <th>SGU (Ours)</th>
-                  <th>TGU (Ours)</th>
-                </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>He darted like an arrow through all the halls, down all the stairs, and across the yard.</td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/original.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/NG.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/KL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+<!--        &lt;!&ndash; Third Slide &ndash;&gt;-->
+<!--        <div class="carousel-item">-->
+<!--          <div class="table-container">-->
+<!--            <table class="table is-fullwidth">-->
+<!--              <h2 class="table-title">LibriSpeech Remain Speaker 3</h2>-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <th>Target Text</th>-->
+<!--                  <th>*Audio Prompt</th>-->
+<!--                  <th>Original</th>-->
+<!--                  <th>Negative Gradient</th>-->
+<!--                  <th>KL Loss</th>-->
+<!--                  <th>SGU (Ours)</th>-->
+<!--                  <th>TGU (Ours)</th>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <td>Other circumstances permitting, that instinct disposes men to look with favor upon productive efficiency and on whatever is of human use.</td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/original.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/NG.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/KL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; Fourth Slide &ndash;&gt;-->
+<!--        <div class="carousel-item">-->
+<!--          <div class="table-container">-->
+<!--            <table class="table is-fullwidth">-->
+<!--              <h2 class="table-title">LibriSpeech Remain Speaker 4</h2>-->
+<!--              <thead>-->
+<!--                <tr>-->
+<!--                  <th>Target Text</th>-->
+<!--                  <th>*Audio Prompt</th>-->
+<!--                  <th>Original</th>-->
+<!--                  <th>Negative Gradient</th>-->
+<!--                  <th>KL Loss</th>-->
+<!--                  <th>SGU (Ours)</th>-->
+<!--                  <th>TGU (Ours)</th>-->
+<!--                </tr>-->
+<!--              </thead>-->
+<!--              <tbody>-->
+<!--              <tr>-->
+<!--                <td>He darted like an arrow through all the halls, down all the stairs, and across the yard.</td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/original.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/NG.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/KL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+<!--          </div>-->
+<!--        </div>-->
 
-      </div>
-    </div>
-  </section>
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 
 <!-- Youtube video -->
 <!--<section class="hero is-small is-light">-->
