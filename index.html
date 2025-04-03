@@ -546,143 +546,6 @@
     </div>
   </section>
   <!-- Carousel container -->
-      <div id="carousel-demo" class="carousel">
-        <!-- First Slide -->
-        <div class="carousel-item">
-          <div class="table-container">
-            <h2 class="table-title">Samples of Similar Speakers from Forget and Remain Set</h2>
-            <table class="table is-fullwidth">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>Remain Speaker Sample</th>
-                    <th>Forget Speaker Sample</th>
-                    <th>SIM</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>1</th>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
-                      <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
-                      <td>0.442</td>
-
-<!--                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>-->
-<!--                      <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>-->
-                  </tr>
-                  <tr>
-                    <th>2</th>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
-                    <td>0.504</td>
-                  </tr>
-                    <th>3</th>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
-                    <td>0.479</td>
-<!--                  <tr>-->
-<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>-->
-<!--                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>-->
-<!--                  </tr>-->
-<!--                    <td>0.442</td>-->
-
-                </tbody>
-              </table>
-            <p class="table-explanation">
-              Slide next to see generated outputs. SIM refers to Speaker Similarity between remain speaker sample and forget speaker sample. Higher SIM means the speakers of two speech sound more similar to each other, hence higher probability of being the same speaker.
-            </p>
-          </div>
-        </div>
-        <!-- Second Slide -->
-        <div class="carousel-item">
-          <div class="table-container">
-            <h2 class="table-title">Handling Forget Speaker</h2>
-            <table class="table is-fullwidth">
-                <thead>
-                    <th></th>
-                    <th>*Audio Prompt</th>
-                    <th>*Sample to Forget</th>
-                    <th>SGU (Ours)</th>
-                    <th>TGU (Ours)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/SGU.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/TGU.wav" type="audio/wav"></audio></td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/SGU.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/TGU.wav" type="audio/wav"></audio></td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/SGU.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/TGU.wav" type="audio/wav"></audio></td>
-                    </tr>
-                </tbody>
-              </table>
-            <p class="table-explanation">
-              *An actual audio file spoken by Forget Speaker, but not seen during training or unlearning process.
-            </p>
-          </div>
-        </div>
-
-        <!-- Third Slide -->
-        <div class="carousel-item">
-          <div class="table-container">
-            <h2 class="table-title">Handling Remain Speaker</h2>
-            <table class="table is-fullwidth">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>*Audio Prompt</th>
-                    <th>*Sample to Retain</th>
-                    <th>SGU (Ours)</th>
-                    <th>TGU (Ours)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/SGU.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/SGU.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/SGU.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
-                    </tr>
-                </tbody>
-              </table>
-            <p class="table-explanation">
-              *An actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
   <section class="section">
     <div class="container">
       <h2 class="title is-4 has-text-centered">Model Pre-trained on LibriTTS (Updating)</h2>
@@ -1309,9 +1172,284 @@
       </div>
     </div>
   </section>
-<!--  <section class="section">-->
-<!--    <div class="container">-->
-<!--      <h1 class="title has-text-centered">LibriTTS-Trained Baseline Comparison on Forget Speakers</h1>-->
+  <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Handling Similar Speakers - Robustness </h1>
+
+      <div id="carousel-demo" class="carousel">
+        <!-- First Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">Samples of Similar Speakers from Forget and Remain Set</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Remain Speaker Sample</th>
+                    <th>Forget Speaker Sample</th>
+                    <th>SIM</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
+                      <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                      <td>0.442</td>
+
+<!--                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>-->
+<!--                      <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>-->
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td>0.504</td>
+                  </tr>
+                    <th>3</th>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td>0.479</td>
+<!--                  <tr>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--                  </tr>-->
+<!--                    <td>0.442</td>-->
+
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              Slide next to see generated outputs. SIM refers to Speaker Similarity between remain speaker sample and forget speaker sample. Higher SIM means the speakers of two speech sound more similar to each other, hence higher probability of being the same speaker.
+            </p>
+          </div>
+        </div>
+        <!-- Second Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">Handling Forget Speaker</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                    <th></th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Forget</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Forget Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+        <!-- Third Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">Handling Remain Speaker</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Retain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+      </div><div id="carousel-demo" class="carousel">
+        <!-- First Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">Samples of Similar Speakers from Forget and Remain Set</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Remain Speaker Sample</th>
+                    <th>Forget Speaker Sample</th>
+                    <th>SIM</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
+                      <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                      <td>0.442</td>
+
+<!--                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>-->
+<!--                      <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>-->
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td>0.504</td>
+                  </tr>
+                    <th>3</th>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td>0.479</td>
+<!--                  <tr>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--                  </tr>-->
+<!--                    <td>0.442</td>-->
+
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              Slide next to see generated outputs. SIM refers to Speaker Similarity between remain speaker sample and forget speaker sample. Higher SIM means the speakers of two speech sound more similar to each other, hence higher probability of being the same speaker.
+            </p>
+          </div>
+        </div>
+        <!-- Second Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">Handling Forget Speaker</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                    <th></th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Forget</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Forget Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+        <!-- Third Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">Handling Remain Speaker</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Retain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
 
 <!--      &lt;!&ndash; Carousel container &ndash;&gt;-->
 <!--      <div id="carousel-demo" class="carousel">-->
