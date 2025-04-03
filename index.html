@@ -554,6 +554,7 @@
             <table class="table is-fullwidth">
                 <thead>
                   <tr>
+                    <th></th>
                     <th>Remain Speaker Sample</th>
                     <th>Forget Speaker Sample</th>
                     <th>SIM</th>
@@ -561,12 +562,19 @@
                 </thead>
                 <tbody>
                   <tr>
+                    <th>1</th>
                     <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
                       <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
                       <td>0.442</td>
 
 <!--                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>-->
 <!--                      <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>-->
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio>
+                    <td>0.417</td>
                   </tr>
 <!--                  <tr>-->
 <!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>-->
@@ -587,7 +595,7 @@
             <h2 class="table-title">Handling Forget Speaker</h2>
             <table class="table is-fullwidth">
                 <thead>
-                    <th>Target Text</th>
+                    <th></th>
                     <th>*Audio Prompt</th>
                     <th>*Sample to Forget</th>
                     <th>SGU (Ours)</th>
@@ -596,19 +604,25 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td rowspan="3">TGT TXT</td>
-                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/SGU_0.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td>1</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/TGU.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/SGU_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td>2</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/TGU.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/SGU_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td>3</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -625,7 +639,7 @@
             <table class="table is-fullwidth">
                 <thead>
                   <tr>
-                    <th>Target Text</th>
+                    <th></th>
                     <th>*Audio Prompt</th>
                     <th>*Sample to Retain</th>
                     <th>SGU (Ours)</th>
@@ -634,19 +648,25 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td rowspan="3">TGT TXT.</td>
-                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/SGU_0.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td>1</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/SGU_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td>2</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/SGU_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td>3</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
