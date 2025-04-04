@@ -172,6 +172,11 @@
       text-align: left;       /* Align text to the left for better readability */
       max-width: 800px;       /* Optional: limit the width for better layout */
     }
+
+    .highlight {
+      background-color: #D9F2D0;
+      /* optional: padding, border-radius, etc. */
+    }
   </style>
 
 </head>
@@ -1218,7 +1223,7 @@
       <div class="content" style="max-width: 600px; margin-left: 3rem;">
       <h1 class="title is-3 mb-4">Handling Similar Speakers - Robustness</h1>
       <p class="mb-6">
-        When there is a Remain Speaker with very similar voice to a Forget Speaker,
+        When there is a <span class="highlight">Remain Speaker with very similar voice to a Forget Speaker</span>,
         surprisingly, even without speaker classification process,
         our method effectively synthesizes Remain Speakers while preventing synthesis of Forget Speakers.
         Here, we identify three speakers from LibriSpeech dataset with high similarity to Forget Speakers and evaluate model performances.
