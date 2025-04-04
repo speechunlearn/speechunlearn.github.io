@@ -367,7 +367,11 @@
         The Forget Speakers can either be seen during pre-training (In-Domain) or
         unseen at all (Out-of-Domain).
       </p>
-      <h3 class="subtitle is-5" style="margin-left: 3rem;">Model Pre-trained on LibriHeavy</h3>
+      <h3 class="subtitle is-5">Model Pre-trained on LibriHeavy</h3>
+      <p class="mb-6">
+        Out-of-Domain scenario unlearns speakers from LibriTTS.
+        In-Domain scenario unlearns speakers from LibriHeavy.
+      </p>
     </div>
 
 
@@ -567,7 +571,15 @@
   <!-- Carousel container -->
   <section class="section">
     <div class="container">
-      <h3 class="subtitle is-4 mb-2" style="margin-left: 3rem;">Model Pre-trained on LibriTTS</h3>
+      <div class="content" style="max-width: 600px; margin-left: 3rem;">
+      <h3 class="subtitle is-5">Model Pre-trained on LibriTTS</h3>
+      <p class="mb-6">
+        We reproduce results of Table 1 of our paper, with different datasets for generalizability.
+        Unlearning 10 speakers at once required 10K steps, which is around <strong>2%</strong> of steps required for pre-training the model with LibriTTS - 500K steps.
+      </p>
+    </div>
+
+    <div class="container">
 
 
       <!-- Carousel container -->
