@@ -170,6 +170,41 @@
       text-align: left;       /* Align text to the left for better readability */
       max-width: 800px;       /* Optional: limit the width for better layout */
     }
+
+    /* The card/container for the audio */
+    .audio-card {
+      background-color: #f0efff;  /* Light purple-ish background */
+      border-radius: 8px;        /* Rounded corners */
+      padding: 1rem;
+      max-width: 400px;          /* You can change this to make it wider/narrower */
+      margin: 1rem auto;         /* Center it on the page */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 1rem;                 /* Space between items inside the card */
+    }
+
+    /* The label above or beside the audio control */
+    .audio-label {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    /* Style the audio element itself */
+    .audio-card audio {
+      flex: 1;                  /* Let the audio take remaining width */
+      outline: none;
+    }
+
+    /* Optional: You can tweak the color of the default audio progress bar
+       in Chrome & Safari using vendor-specific CSS.
+       This is *not* universal, though — other browsers may ignore it. */
+    .audio-card audio::-webkit-media-controls {
+      background-color: #f6f7fb;
+    }
+
+
   </style>
 
 </head>
@@ -469,7 +504,12 @@
                 <tbody>
                   <tr>
                     <td rowspan="3">If he falls in my way I shall tell him my mind. If he don't fall in my way I shan't for it won't be worth my while to do it.</td>
-                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><div class="audio-card">
+                        <audio controls>
+                          <source src="static/audios/forget_speakers/2/source.wav" type="audio/wav">
+                          Your browser does not support the audio element.
+                        </audio>
+                      </div></td>
                     <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
                     <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>
                     <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
