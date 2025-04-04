@@ -170,41 +170,6 @@
       text-align: left;       /* Align text to the left for better readability */
       max-width: 800px;       /* Optional: limit the width for better layout */
     }
-
-    /* The card/container for the audio */
-    .audio-card {
-      background-color: #f0efff;  /* Light purple-ish background */
-      border-radius: 8px;        /* Rounded corners */
-      padding: 1rem;
-      max-width: 400px;          /* You can change this to make it wider/narrower */
-      margin: 1rem auto;         /* Center it on the page */
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      gap: 1rem;                 /* Space between items inside the card */
-    }
-
-    /* The label above or beside the audio control */
-    .audio-label {
-      font-weight: 600;
-      font-size: 1rem;
-      color: #444;
-    }
-
-    /* Style the audio element itself */
-    .audio-card audio {
-      flex: 1;                  /* Let the audio take remaining width */
-      outline: none;
-    }
-
-    /* Optional: You can tweak the color of the default audio progress bar
-       in Chrome & Safari using vendor-specific CSS.
-       This is *not* universal, though — other browsers may ignore it. */
-    .audio-card audio::-webkit-media-controls {
-      background-color: #f6f7fb;
-    }
-
-
   </style>
 
 </head>
@@ -429,18 +394,18 @@
                 <tbody>
                   <tr>
                     <td rowspan="3">I made fifteen or sixteen dresses for her during the spring and early part of the summer when she left Washington spending the hot weather at Saratoga Long Branch and other places.</td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/OOD/prompt.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/OOD/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/OOD/SGU_3.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/OOD/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/prompt.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/SGU_3.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/TGU_0.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/OOD/SGU_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/OOD/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/SGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/TGU_1.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/OOD/SGU_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/OOD/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/SGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/OOD/TGU_2.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -467,18 +432,18 @@
                 <tbody>
                   <tr>
                     <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -504,18 +469,18 @@
                 <tbody>
                   <tr>
                     <td rowspan="3">If he falls in my way I shall tell him my mind. If he don't fall in my way I shan't for it won't be worth my while to do it.</td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -542,18 +507,18 @@
                 <tbody>
                   <tr>
                     <td rowspan="3">I contend then, that the true place to fight the battle is in the union, and within the provisions of the constitution.</td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/3/source.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -579,18 +544,18 @@
                 <tbody>
                   <tr>
                     <td rowspan="3">Through these the ends of the bars passing across the door were placed. Which if anything made the opening when closed and fastened inside stronger than any other portion of the structure.</td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/4/source.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -636,18 +601,18 @@
                 <tbody>
                   <tr>
                     <td rowspan="3">He saw no folk in the streets save here and there and an old woman sitting at the door of her house and maybe a young child with her. </td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/1/SGU_0.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/SGU_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/1/SGU_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/SGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/1/SGU_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/SGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -672,18 +637,18 @@
                 <tbody>
                   <tr>
                     <td rowspan="3">He believed neither in God nor the devil, but was much concerned about the question of improvement of the clergy and the maintenance of their revenues and took special trouble to keep up the church in his village.</td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/2/SGU_0.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/2/SGU_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/2/SGU_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/2/SGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/2/SGU_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/2/SGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -710,18 +675,18 @@
                 <tbody>
                   <tr>
                     <td rowspan="3">I'm hoping for the best, said Harry.</td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/3/SGU_0.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/3/SGU_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/3/SGU_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/3/SGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/3/SGU_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/3/SGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -747,18 +712,18 @@
                 <tbody>
                   <tr>
                     <td rowspan="3">He was afraid to be sure and his heart was beating fast with excitement of the moment, but he knew he must regain the magic umbrella if he would save his comrades and himself from destruction. For without it, they could never return to the Earth.</td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/4/source.wav" type="audio/wav"></audio></td>
-                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/4/SGU_0.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/SGU_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/4/SGU_1.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/SGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/4/SGU_2.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/SGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -804,10 +769,10 @@
                 <tbody>
                   <tr>
                     <td>They then renewed their journey and under the better light made a safe crossing of the stable roofs.</td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/RL.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
                   </tr>
                 </tbody>
               </table>
@@ -834,10 +799,10 @@
                 <tbody>
                   <tr>
                     <td>...and towards Christmas, he was one of the first that was cut down.</td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
                   </tr>
                 </tbody>
               </table>
@@ -864,10 +829,10 @@
                 <tbody>
                   <tr>
                     <td>Other circumstances permitting, that instinct disposes men to look with favor upon productive efficiency and on whatever is of human use.</td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
                   </tr>
                 </tbody>
               </table>
@@ -893,10 +858,10 @@
                 <tbody>
                   <tr>
                     <td>He darted like an arrow through all the halls, down all the stairs, and across the yard.</td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>
                   </tr>
                 </tbody>
               </table>
@@ -937,26 +902,26 @@
               <tbody>
               <tr>
                 <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>
-                <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>
               </tr>
               <tr>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>
               </tr>
               <tr>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>
               </tr>
               </tbody>
             </table>
@@ -985,26 +950,26 @@
               <tbody>
               <tr>
                 <td rowspan="3">If he falls in my way I shall tell him my mind. If he don't fall in my way I shan't for it won't be worth my while to do it.</td>
-                <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/Original_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/NG_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/KL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>
               </tr>
               <tr>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/Original_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/NG_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/KL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>
               </tr>
               <tr>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/Original_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/NG_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/KL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>
               </tr>
               </tbody>
             </table>
@@ -1033,26 +998,26 @@
               <tbody>
               <tr>
                 <td rowspan="3">I contend then, that the true place to fight the battle is in the union, and within the provisions of the constitution.</td>
-                <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/3/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/Original_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/NG_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/KL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>
               </tr>
               <tr>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/Original_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/NG_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/KL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>
               </tr>
               <tr>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/Original_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/NG_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/KL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>
               </tr>
               </tbody>
             </table>
@@ -1080,26 +1045,26 @@
               <tbody>
               <tr>
                 <td rowspan="3">Through these the ends of the bars passing across the door were placed. Which if anything made the opening when closed and fastened inside stronger than any other portion of the structure.</td>
-                <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/4/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/Original_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/NG_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/KL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
+                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
               </tr>
               <tr>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/Original_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/NG_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/KL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
               </tr>
               <tr>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/Original_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/NG_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/KL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
               </tr>
               </tbody>
             </table>
@@ -1139,12 +1104,12 @@
               <tbody>
               <tr>
                 <td>They then renewed their journey and under the better light made a safe crossing of the stable roofs.</td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/original.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/NG.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/KL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/RL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
               </tr>
               </tbody>
             </table>
@@ -1170,12 +1135,12 @@
               <tbody>
               <tr>
                 <td>...and towards Christmas, he was one of the first that was cut down.</td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/original.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/NG.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/KL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
               </tr>
               </tbody>
             </table>
@@ -1201,12 +1166,12 @@
               <tbody>
               <tr>
                 <td>Other circumstances permitting, that instinct disposes men to look with favor upon productive efficiency and on whatever is of human use.</td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/original.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/NG.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/KL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
               </tr>
               </tbody>
             </table>
@@ -1231,12 +1196,12 @@
               <tbody>
               <tr>
                 <td>He darted like an arrow through all the halls, down all the stairs, and across the yard.</td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/original.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/NG.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/KL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>
-                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/original.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/NG.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/KL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>
+                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>
               </tr>
               </tbody>
             </table>
@@ -1277,26 +1242,26 @@
                 <tbody>
                   <tr>
                     <th>1</th>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
-                      <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
+                      <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
                       <td>0.442</td>
 
-<!--                    <td rowspan="3"><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>-->
+<!--                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>-->
 <!--                      <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>-->
                   </tr>
                   <tr>
                     <th>2</th>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
                     <td>0.504</td>
                   </tr>
                     <th>3</th>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
                     <td>0.479</td>
 <!--                  <tr>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/LibriTTS_forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>-->
 <!--                  </tr>-->
 <!--                    <td>0.442</td>-->
 
@@ -1323,24 +1288,24 @@
 <!--                <tbody>-->
 <!--                  <tr>-->
 <!--                    <td>1</td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/1/SGU.wav" type="audio/wav"></audio></td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/1/TGU.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/SGU.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/TGU.wav" type="audio/wav"></audio></td>-->
 <!--                  </tr>-->
 <!--                  <tr>-->
 <!--                    <td>2</td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/2/SGU.wav" type="audio/wav"></audio></td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/2/TGU.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/SGU.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/TGU.wav" type="audio/wav"></audio></td>-->
 <!--                  </tr>-->
 <!--                  <tr>-->
 <!--                    <td>3</td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/3/SGU.wav" type="audio/wav"></audio></td>-->
-<!--                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/3/TGU.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/SGU.wav" type="audio/wav"></audio></td>-->
+<!--                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/TGU.wav" type="audio/wav"></audio></td>-->
 <!--                    </tr>-->
 <!--                </tbody>-->
 <!--              </table>-->
@@ -1367,24 +1332,24 @@
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/1/SGU.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/1/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/2/SGU.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/3/SGU.wav" type="audio/wav"></audio></td>
-                    <td><audio class="small-audio" ><source src="static/audios/similar_remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_forget_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/SGU.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/similar_remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
                     </tr>
                 </tbody>
               </table>
@@ -1423,26 +1388,26 @@
 <!--              <tbody>-->
 <!--              <tr>-->
 <!--                <td rowspan="3">She had to go through a lot of red tape before she got it. Had quite a time of it she did, and say kid, that woman ain't so bad.</td>-->
-<!--                <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_0.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              <tr>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_1.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              <tr>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/Original_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/NG_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/KL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/RL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/1/TGU_2.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              </tbody>-->
 <!--            </table>-->
@@ -1471,26 +1436,26 @@
 <!--              <tbody>-->
 <!--              <tr>-->
 <!--                <td rowspan="3">If he falls in my way I shall tell him my mind. If he don't fall in my way I shan't for it won't be worth my while to do it.</td>-->
-<!--                <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/Original_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/NG_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/KL_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_0.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              <tr>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/Original_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/NG_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/KL_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_1.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              <tr>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/Original_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/NG_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/KL_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/Original_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/NG_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/KL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/RL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/2/TGU_2.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              </tbody>-->
 <!--            </table>-->
@@ -1519,26 +1484,26 @@
 <!--              <tbody>-->
 <!--              <tr>-->
 <!--                <td rowspan="3">I contend then, that the true place to fight the battle is in the union, and within the provisions of the constitution.</td>-->
-<!--                <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/3/source.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/Original_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/NG_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/KL_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_0.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              <tr>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/Original_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/NG_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/KL_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_1.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              <tr>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/Original_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/NG_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/KL_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/Original_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/NG_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/KL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/RL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/3/TGU_2.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              </tbody>-->
 <!--            </table>-->
@@ -1566,26 +1531,26 @@
 <!--              <tbody>-->
 <!--              <tr>-->
 <!--                <td rowspan="3">Through these the ends of the bars passing across the door were placed. Which if anything made the opening when closed and fastened inside stronger than any other portion of the structure.</td>-->
-<!--                <td rowspan="3"><audio class="small-audio" ><source src="static/audios/forget_speakers/4/source.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/Original_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/NG_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/KL_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_0.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              <tr>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/Original_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/NG_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/KL_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_1.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              <tr>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/Original_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/NG_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/KL_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/Original_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/NG_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/KL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/RL_2.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              </tbody>-->
 <!--            </table>-->
@@ -1625,12 +1590,12 @@
 <!--              <tbody>-->
 <!--              <tr>-->
 <!--                <td>They then renewed their journey and under the better light made a safe crossing of the stable roofs.</td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/source.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/original.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/NG.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/KL.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/RL.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/original.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/NG.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/KL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/RL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/TGU.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              </tbody>-->
 <!--            </table>-->
@@ -1656,12 +1621,12 @@
 <!--              <tbody>-->
 <!--              <tr>-->
 <!--                <td>...and towards Christmas, he was one of the first that was cut down.</td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/original.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/NG.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/KL.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/original.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/NG.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/KL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              </tbody>-->
 <!--            </table>-->
@@ -1687,12 +1652,12 @@
 <!--              <tbody>-->
 <!--              <tr>-->
 <!--                <td>Other circumstances permitting, that instinct disposes men to look with favor upon productive efficiency and on whatever is of human use.</td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/original.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/NG.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/KL.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/original.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/NG.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/KL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              </tbody>-->
 <!--            </table>-->
@@ -1717,12 +1682,12 @@
 <!--              <tbody>-->
 <!--              <tr>-->
 <!--                <td>He darted like an arrow through all the halls, down all the stairs, and across the yard.</td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/original.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/NG.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/KL.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>-->
-<!--                <td><audio class="small-audio" ><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/original.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/NG.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/KL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>-->
+<!--                <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>-->
 <!--              </tr>-->
 <!--              </tbody>-->
 <!--            </table>-->
