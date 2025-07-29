@@ -142,7 +142,7 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the carousel items */
       border-radius: 10px; /* To match the rounded style */
       background-color: white; /* Background of the table should be white */
-      overflow: visible !important
+      overflow: visible !important;
       min-width: 100%; /* Ensures the slide takes up full width */
     }
     .carousel .carousel-item {
@@ -156,7 +156,7 @@
       margin: 0 3px;        /* Adjust spacing */
       border-radius: 50%;   /* Make perfect circles */
     }
-    
+
     /* Optionally, style the "active" bullet differently */
     .bulma-carousel .carousel-bullet.is-active {
       width: 10px;
@@ -207,33 +207,37 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous Submission</a><sup>*</sup>,</span>
-<!--                <span class="author-block">-->
-<!--                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>-->
-<!--                  <span class="author-block">-->
-<!--                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>-->
-<!--                  </span>-->
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Jinju Kim</a><sup>*</sup>,</span>
+                <span class="author-block">
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Taesoo Kim</a><sup>*</sup>,</span>
+                <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Dongchan Kim</a>,</span>
+                <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Jong Hwan Ko</a><sup>†</sup>,</span>
+                <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Gyeong-Moon Park</a><sup>†</sup>,</span>
                   </div>
 
-<!--                  <div class="is-size-5 publication-authors">-->
-<!--                    <span class="author-block">Institution Name<br>Conferance name and year</span>-->
-<!--                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
-<!--                  </div>-->
+                 <div class="is-size-5 publication-authors">
+                   <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
+                   <span class="eql-cntrb"><small><br><sup>†</sup>Corresponding Author</small></span>
+                   <span class="author-block">Institution Name<br>Conferance name and year</span>
+                 </div>
                       <div class="is-size-5 publication-authors">
-                        <span class="author-block">Submitted to the Forty-second International Conference on Machine Learning</span>
+                        <span class="author-block">In Proceedings of the 42nd International Conference on Machine Learning (ICML 2025)</span>
                       </div>
-<!--                  <div class="column has-text-centered">-->
-<!--                    <div class="publication-links">-->
-<!--                         &lt;!&ndash; Arxiv PDF link &ndash;&gt;-->
-<!--                      <span class="link-block">-->
-<!--                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"-->
-<!--                        class="external-link button is-normal is-rounded is-dark">-->
-<!--                        <span class="icon">-->
-<!--                          <i class="fas fa-file-pdf"></i>-->
-<!--                        </span>-->
-<!--                        <span>Paper</span>-->
-<!--                      </a>-->
-<!--                    </span>-->
+                 <div class="column has-text-centered">
+                   <div class="publication-links">
+                        &lt;!&ndash; Arxiv PDF &ndash;&gt;
+                     <span class="link-block">
+                       <a href="https://arxiv.org/pdf/2507.20140" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                       <span class="icon">
+                         <i class="fas fa-file-pdf"></i>
+                       </span>
+                       <span>Paper</span>
+                     </a>
+                    </span>
 
 <!--                    &lt;!&ndash; Supplementary PDF link &ndash;&gt;-->
 <!--                    <span class="link-block">-->
@@ -246,16 +250,16 @@
 <!--                    </a>-->
 <!--                  </span>-->
 
-<!--                  &lt;!&ndash; Github link &ndash;&gt;-->
-<!--                  <span class="link-block">-->
-<!--                    <a href="https://github.com/YOUR REPO HERE" target="_blank"-->
-<!--                    class="external-link button is-normal is-rounded is-dark">-->
-<!--                    <span class="icon">-->
-<!--                      <i class="fab fa-github"></i>-->
-<!--                    </span>-->
-<!--                    <span>Code</span>-->
-<!--                  </a>-->
-<!--                </span>-->
+                 &lt;!&ndash; Github link &ndash;&gt;
+                 <span class="link-block">
+                   <a href="https://github.com/mokcho/spk_id_unlearn_icml2025" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                   <span class="icon">
+                     <i class="fab fa-github"></i>
+                   </span>
+                   <span>Code</span>
+                 </a>
+                </span>
 
                 <!-- ArXiv abstract Link -->
 <!--                <span class="link-block">-->
@@ -265,8 +269,8 @@
 <!--                    <i class="ai ai-arxiv"></i>-->
 <!--                  </span>-->
 <!--                  <span>arXiv</span>-->
-                </a>
-              </span>
+                <!-- </a> -->
+              <!-- </span> -->
             </div>
           </div>
         </div>
@@ -1798,13 +1802,12 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@inproceedings{
-        anonymous2024do,
-        title={Do Not Mimic My Voice: Speaker Identity Unlearning for Zero-Shot Text-to-Speech},
-        author={Anonymous},
-        booktitle={Submitted to the Forty-second International Conference on Machine Learning},
-        year={2025},
-        url={https://openreview.net/forum?id=1EgFJDjodU&noteId=1EgFJDjodU},
-        note={under review}
+          kim2025do,
+          title={Do Not Mimic My Voice : Speaker Identity Unlearning for Zero-Shot Text-to-Speech},
+          author={Taesoo Kim and Jinju Kim and Dong Chan Kim and Jong Hwan Ko and Gyeong-Moon Park},
+          booktitle={Forty-second International Conference on Machine Learning},
+          year={2025},
+          url={https://openreview.net/forum?id=1EgFJDjodU}
         }</code></pre>
     </div>
 </section>
